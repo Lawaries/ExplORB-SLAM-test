@@ -42,7 +42,7 @@ git clone https://github.com/JulioPlaced/ExplORBSLAM.git
 2. Build repo:
 ```
 cd ExplORBSLAM/
-catkin b
+catkin build
 ```
 
 3. Remember to source the ExplORBSLAM workspace:
