@@ -267,56 +267,6 @@ python3 -c "import numpy, sklearn, numba, cv2; print('All Python libs imported s
 * Some dependencies (like `octomap_ros` or `gazebo_ros`) may require additional ROS environment variables if you use a different workspace or multiple ROS versions.
 * If you use Ubuntu 22.04 or ROS2, installation steps and package names will be different.
 
-
-## 1. System Update
-sudo apt update && sudo apt upgrade -y
-
-## 2. ROS Noetic Installation
-sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
-sudo apt install curl
-curl -s https://raw.githubusercontent.com/ros/rosdistro/master/ros.asc | sudo apt-key add -
-sudo apt update
-sudo apt install ros-noetic-desktop-full
-sudo rosdep init
-rosdep update
-echo "source /opt/ros/noetic/setup.bash" >> ~/.bashrc
-source ~/.bashrc
-sudo apt install python3-rosinstall python3-rosinstall-generator python3-wstool build-essential
-
-## 3. Catkin Workspace
-mkdir -p ~/catkin_ws/src
-cd ~/catkin_ws/
-catkin_make
-echo "source ~/catkin_ws/devel/setup.bash" >> ~/.bashrc
-source ~/.bashrc
-
-## 4. Core Libraries
-sudo apt install libeigen3-dev
-sudo apt install libopencv-dev python3-opencv
-pip3 install numpy scikit-learn numba
-
-## 5. ROS Packages
-sudo apt install ros-noetic-rviz ros-noetic-move-base ros-noetic-gazebo-ros-pkgs ros-noetic-octomap-ros ros-noetic-octomap-rviz-plugins ros-noetic-turtlebot3-teleop
-
-## 6. Gazebo Simulator
-sudo apt install gazebo11
-sudo apt install ros-noetic-gazebo-ros-control
-
-## 7. Clone and Build Project
-cd ~/catkin_ws/src
-git clone https://github.com/WhiZTiM/ExplORB-SLAM.git
-cd ~/catkin_ws
-catkin_make
-
-## 8. TurtleBot3 Model (if used)
-echo "export TURTLEBOT3_MODEL=burger" >> ~/.bashrc
-source ~/.bashrc
-
-## 9. Check Installations
-python3 -c "import numpy, sklearn, numba, cv2; print('All Python libs imported successfully!')"
-
-
-
 Building
 ------------
 1. Clone repo:
