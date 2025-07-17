@@ -243,7 +243,7 @@ sudo apt install ros-noetic-gazebo-ros-control
 
 ## 7. Clone and Build Project
 cd ~/catkin_ws/src
-git clone https://github.com/WhiZTiM/ExplORB-SLAM.git
+git clone [https://github.com/WhiZTiM/ExplORB-SLAM.git](https://github.com/Lawaries/ExplORB-SLAM-test.git)
 cd ~/catkin_ws
 catkin_make
 
@@ -321,7 +321,7 @@ Building
 ------------
 1. Clone repo:
 ```
-git clone https://github.com/JulioPlaced/ExplORBSLAM.git
+git clone [https://github.com/JulioPlaced/ExplORBSLAM.git](https://github.com/Lawaries/ExplORB-SLAM-test.git)
 ```
 
 2. Build repo:
